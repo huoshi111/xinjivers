@@ -1,0 +1,412 @@
+<!--火狮 心计-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/huoshi111/huoshiyinyuelogo/main/huoshiyinyuelogo.png">
+    <title>心计</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
+            background-image: url('https://raw.githubusercontent.com/Xiaowameijiao/huoshiyinyuebizhi4.github.io/main/huoshiyinyuebizhi5.webp');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+        }
+        .book-container {
+            width: 80%;
+            height: 90%;
+            position: relative;
+            border: 1px solid #a4a4a4;
+            background: #eeeeee;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .cover {
+            width: 80%;
+            height: 90%;
+            position: relative;
+            background: #2c2c2cf3;
+            color: #fafafacb;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 20px;
+
+        }
+        .cover h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .open-button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background: #171717;
+            color: rgba(255, 255, 255, 0.838);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .open-button:hover {
+            background: #262626;
+        }
+        .left-page, .right-page {
+            width: 50%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        .left-page {
+            border-right: 1px solid #ccc;
+        }
+        .arrow {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #35353567;
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .arrow:hover {
+            background: #36363677;
+        }
+        .arrow.next {
+            bottom: 20px;
+            right: 20px;
+        }
+        .arrow.prev {
+            bottom: 20px;
+            left: 20px;
+        }
+        .page-content {
+            display: none;
+        }
+        .page-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <br>
+        <strong><center>
+            <b> Versión Español</b>
+            <br><br>
+        <img src="https://github.com/huoshi111/xinjies/blob/main/0.png?raw=true" width="50%"; height="60%">
+        <br>
+        <p>Ley de la República Popular China, Artículo 246 [Delito de Insulto, Delito de Difamación]: Insultar públicamente a otra persona mediante violencia u otros métodos, o inventar hechos para difamar a otra persona,<br>si las circunstancias son graves, se impondrá una pena de prisión de hasta tres años, detención, control o privación de derechos políticos.</p>
+    
+        </center>
+        </strong>
+        <br><br><br>
+        <button class="open-button" id="open-button">Abrir</button>
+        <br>
+        <p> X </p>
+    </div>
+
+    <div class="book-container" id="book-container">
+        <!-- Left and Right Pages -->
+        <div class="left-page">
+
+            <div class="page-content active" id="page-1-left">
+                <center> <b>Página 1</b></center>
+                <hr>
+                <br>
+                <b>Esto no es para volverte frío o calculador, sino para protegerte mejor y relacionarte con los demás de manera más consciente.</b>
+                <br>
+                <br>
+                <b>1. Aprende a leer entre líneas</b>
+                <p>- Las palabras y acciones de los demás suelen revelar sus pensamientos internos. Aprende a observar las expresiones, el tono y las intenciones detrás del comportamiento de los demás.</p>
+                <br>
+                <b>2. Mantener distancia es una herramienta de protección</b>
+                <p>- Incluso con personas cercanas, es necesario mantener límites apropiados. Ser demasiado franco puede llevar a que se aprovechen de ti.</p>
+                <br>
+                <b>3. No muestres todo tu potencial frente a todos</b>
+                <p>- Deja espacio para la imaginación de los demás y no reveles tus cartas fácilmente.</p>
+                <br>
+                <b>4. La calma es la mayor fortaleza</b>
+                <p>- Ante provocaciones y conflictos, responder con calma te permite tomar el control de la situación.</p>
+                <br>
+                <b>5. Los pequeños gestos ganan corazones</b>
+                <p>- En el momento adecuado, ofrecer ayuda o incluso pequeños regalos puede ayudarte a construir buenas relaciones interpersonales.</p>
+                <br>
+            </div>
+            
+
+            <div class="page-content" id="page-2-left">
+                <center><b>Página 3</b></center>
+                <hr>
+                <br>
+                <b>A nivel personal</b>
+                <br>
+                <br>
+                <b>1. No reveles fácilmente tus gustos y disgustos</b>
+                <p>- Mostrar claramente tus preferencias puede convertirse en un medio para que otros te manipulen, y tus disgustos pueden ser utilizados como un punto de ataque.</p>
+                <br>
+                <b>2. Evita competir con los demás</b>
+                <p>- Muchas veces, ganar una discusión puede costarte las relaciones. En lugar de confrontaciones innecesarias, dar un paso atrás puede abrir nuevas posibilidades.</p>
+                <br>
+                <b>Sabiduría global</b>
+                <br><br>
+                <b>3. Aprende que "el silencio es oro"</b>
+                <p>- En situaciones complejas, hablar menos siempre es más seguro que hablar demasiado. Permitir que los demás se expresen más te ayudará a obtener más información.</p>
+                <br>
+                <b>4. No seas esclavo de tus emociones</b>
+                <p>- Ante frustraciones o enfados, no reacciones de inmediato. Tomarte un momento para reflexionar te pondrá en una posición más ventajosa.</p>
+            </div>
+            
+            <div class="page-content" id="page-3-left">
+                <center><b>Página 5</b></center>
+                <hr>
+                <br>
+                <b>Estas estrategias y sabidurías están diseñadas para adaptarse mejor a las complejas relaciones interpersonales y sociales. Recuerda: "Es esencial tener precaución con los demás, pero nunca dañar intencionadamente a otros".</b>
+                <br>
+                <br>
+                <br>
+                <b>1. Cada persona tiene su propio talento; solo necesitas descubrirlo.</b>
+                <p>- No ser bueno en los estudios no significa que no tengas habilidades. Tal vez eres bueno con las manos, creativo, comunicativo u otras cosas únicas.</p>
+                <br>
+                <b>2. El título académico no es el único estándar de éxito. Encuentra lo que amas y dedícate por completo; puedes lograr milagros.</b>
+                <p>- Muchas personas exitosas no tienen títulos académicos elevados, pero lograron su valor a través de enfoque y esfuerzo.</p>
+                <br>
+                <b>3. No te dejes limitar por las opiniones de los demás; el verdadero éxito es hacer lo que te gusta y en lo que eres bueno.</b>
+                <p>- Cada persona tiene su propio camino único en la vida. No necesitas vivir según los estándares de otros.</p>
+                <br>
+                <b>4. No ser bueno en los estudios no significa que no tengas futuro. Tu vida se define por cómo eliges y actúas.</b>
+                <p>- Encuentra tu dirección; la práctica es mucho más importante que las calificaciones.</p>
+                <br>
+            </div>
+            
+            <div class="page-content" id="page-4-left">
+                <center><b>Página 7</b></center>
+                <hr>
+                <br>
+                <b>Sé tú mismo, pero no cruces los límites.</b>
+                <br>
+                <br>
+                <b>1. Tu vida es tuya; las opiniones de los demás son como el viento, no pueden derribarte.</b>
+                <p>- No dejes que los juicios externos dominen tu vida; concéntrate en ser tú mismo.</p>
+                <br>
+                <b>2. Las palabras de los demás son pasajeras, pero tu firmeza interior es eterna.</b>
+                <p>- No dudes de tu valor por un comentario de alguien más.</p>
+                <br>
+                <b>3. Ser tú mismo es más importante que tratar de agradar a los demás.</b>
+                <p>- No necesitas cambiar para complacer a nadie; las personas que realmente te entienden te apreciarán por quien eres.</p>
+                <br>
+                <b>4. Lo que los demás piensan de ti no importa; lo importante es cómo te ves a ti mismo.</b>
+                <p>- El reconocimiento propio es la clave para la tranquilidad interior.</p>
+                <br>
+                <b>5. No vivas bajo la mirada de los demás; una persona verdaderamente libre sigue su corazón.</b>
+                <p>- Solo con libertad interior puedes realmente tomar el control de tu destino.</p>
+            </div>
+            
+            <div class="page-content" id="page-5-left">
+                <center><b>Página 9</b></center>
+                <hr><br>
+                <b>Encuentra el verdadero camino y el valor</b>
+                <br><br>
+                <p>- No te detengas por un "no puedes" de alguien que dice. Ellos no conocen tu potencial, y tú debes demostrarlo con tus acciones.</p>
+                <p>- Cuando te esfuerzas y finalmente fallas, eso no es un verdadero fracaso, sino una acumulación de crecimiento. El fracaso en sí mismo es un logro valioso.</p>
+                <p>- El fracaso te ayuda a comprender mejor qué es el éxito y te enseña el valor de la perseverancia.</p>
+                <p>- No dejes que un "no lo mereces" de alguien más sacuda tu confianza. El verdadero valor lo creas tú mismo.</p>
+                <p>- Cuando te sientas triste, no pienses en cosas negativas. En este mundo siempre hay algo que puede alegrarte.</p>
+                <p>- Entre las personas no existen amistades eternas, solo intereses eternos. Pero eso no significa que no haya verdaderos amigos. La amistad genuina requiere tiempo y sinceridad. Paso a paso, con dedicación, podrás encontrar personas dignas de confianza.</p>
+                <p>- Cuando te sientas triste, recuerda detenerte y pensar en cosas que te hagan feliz, o escucha tu música favorita. Incluso una sola canción puede calentar tu corazón y ayudarte a encontrar el camino.</p>
+                <p>- Tal vez todos hayamos experimentado el egoísmo, la frialdad y la traición de "amigos". Recuerda, esas personas no merecen ser llamadas "amigos". Son solo sombras pasajeras en tu vida y no valen tu tiempo ni tus emociones.</p>
+            </div>
+            
+            <div class="page-content" id="page-6-left">
+                <center><b>Página 11</b></center>
+                <hr><br>
+                <p>- Cuando otros o tus seres queridos se burlen o te insulten, la mejor opción es ignorarlos, ser tú mismo y buscar tu verdadero camino. Esas personas nunca encontrarán el camino hacia el respeto.</p>
+                <p>- Aquellos que se burlan y te insultan están atrapados en su propia estrechez. No permitas que te arrastren al mismo abismo.</p>
+                <p>- Cuando otros o tus seres queridos se burlen de ti y utilicen tus debilidades para hacerte daño, la mejor opción es ignorarlos, concentrarte en ser tú mismo y buscar tu verdadero camino. Porque quienes te critican nunca encontrarán el camino hacia el respeto.</p>
+                <p>- Cuando enfrentes dificultades, no tengas miedo. La mejor manera de afrontarlas es enfrentándolas, y la perseverancia será tu verdadera victoria.</p>
+            </div>
+            
+        </div>
+
+
+
+
+
+        <div class="right-page">
+            <div class="page-content active" id="page-1-right">
+                <center><b>Página 2</b></center>
+                <hr>
+                <br>
+                <b>6. La confianza en las personas debe ser escalonada</b>
+                <p>- Diferentes personas merecen diferentes niveles de confianza; no le cuentes todos tus secretos a la misma persona.</p>
+                <br>
+                <b>7. No reveles fácilmente tus puntos débiles</b>
+                <p>- Una vez que las personas conozcan tus debilidades y puntos vulnerables, podrían convertirse en armas en su contra.</p>
+                <br>
+                <b>8. Guardar secretos es respetarte a ti mismo</b>
+                <p>- No solo los secretos de los demás, también es importante no compartir demasiado sobre tu propia vida.</p>
+                <br>
+                <b>9. Las cosas grandes se reducen a cosas pequeñas, las cosas pequeñas se reducen a cosas minúsculas.</b>
+                <p>- En los conflictos interpersonales, saber cómo suavizar los problemas, evitando que lo pequeño se convierta en algo irreconciliable.</p>
+                <br>
+                <b>10. Mantente alejado de las relaciones sociales ineficaces</b>
+                <p>- Dedica tu tiempo y energía a lo que realmente importa y a las personas que son importantes, en lugar de desperdiciarlo en relaciones sin sentido.</p>
+                <br>
+                <b>11. Verdaderos amigos</b>
+                <p>- Cuando le compartes a un amigo tus malas experiencias, si él solo te ofrece palabras comunes de consuelo, no es un verdadero amigo. Un verdadero amigo interesa por lo que has vivido, te escucha y te apoya, no se limita a decir algo para que todo pase rápidamente.</p>
+            </div>
+        
+            <div class="page-content" id="page-2-right">
+                <center><b>Página 4</b></center>
+                <hr>
+                <br>
+                <b>5. Mira los problemas desde lo alto</b>
+                <p>- No te sumerjas solo en los beneficios o conflictos inmediatos; trata de ver los problemas desde una perspectiva más global y a largo plazo. A menudo podrás encontrar mejores soluciones.</p>
+                <br>
+                <b>6. Perdona</b>
+                <p>- No perdones fácilmente a aquellos que te han hecho daño.</p>
+                <br><br>
+                <b>Recuerda, siempre respeta a los demás que te respeten.</b>
+            </div>
+            
+            <div class="page-content" id="page-3-right">
+                <center><b>Página 6</b></center>
+                <hr>
+                <br>
+                <b>5. Hay cosas que la escuela no enseña, pero la sociedad te dará la oportunidad de aprenderlas.</b>
+                <p>- Las calificaciones de la escuela son solo una parte de la vida; tu potencial va mucho más allá de los números en tu boleta.</p>
+                <br>
+                <b>6. Cree en la acumulación del esfuerzo, cada paso de hoy está construyendo la base para el futuro.</b>
+                <p>- Ya sea una pequeña habilidad o un hobby, el esfuerzo constante se convertirá en tu capital.</p>
+                <br>
+                <b>7. No tengas miedo al fracaso, el fracaso es solo una señal en el camino hacia el éxito.</b>
+                <p>- Cada caída es una oportunidad para aprender; te hará más resistente e inteligente que los demás.</p>
+                <br>
+                <b>8. Cada gran persona comenzó desde algo insignificante.</b>
+                <p>- El estado en el que te encuentras ahora no define tu futuro; lo importante es no perder la motivación para seguir adelante.</p>
+                <br>
+                <b>9. La altura de la vida está determinada por tus sueños, no por tu nivel educativo.</b>
+                <p>- Para volar más alto, necesitas confianza, paciencia y acción, no las etiquetas externas.</p>
+                <br>
+                <b>10. No te apresures a demostrarte, trabaja lentamente, algún día serás más fuerte de lo que imaginas.</b>
+                <p>- Lo más importante es superarte a ti mismo, no complacer a los demás.</p>
+            </div>
+            
+            <div class="page-content" id="page-4-right">
+                <center><b>Página 8</b></center>
+                <hr><br>
+                <b>Buscar la paz interior es más valioso que complacer a los demás.</b>
+                <br><br>
+                <b>6. Las voces externas nunca podrán definirte, tus acciones y perseverancia son la respuesta.</b>
+                <p>- Sigue tu propio camino, el tiempo demostrará todo.</p>
+                <br>
+                <b>11. Escucha las opiniones, pero no dejes que te influencien; absorbe los consejos, pero no pierdas tu identidad.</b>
+                <p>- Mantén una mente abierta, pero también defiende tus principios y límites.</p>
+                <br>
+                <b>12. Algunos amigos nunca podrán entenderte,</b>
+                <p>- No necesitas que todos te apoyen, lo importante es tener confianza en ti mismo.</p>
+                <br>
+                <b>13. No dejes que el miedo al juicio te detenga, avanzar valientemente es la mejor respuesta a las críticas.</b>
+                <p>- El proceso de crecimiento siempre estará acompañado de críticas, pero eventualmente las superarás.</p>
+                <br>
+                <b>14. Lo que piensen tus amigos o los demás sobre ti es asunto de ellos, cómo vives tu vida es asunto tuyo.</b>
+                <p>- No vivas para complacer a los demás, tienes el derecho de decidir tu propio estilo de vida.</p>
+                <br><br>
+            </div>
+            
+            <div class="page-content" id="page-5-right">
+                <center><b>Página 10</b></center>
+                <hr><br>
+                <p>- No te sientas triste por amistades falsas, las personas que se alejan solo están ayudando a limpiar la basura de tu vida.</p>
+                <p>- Los amigos falsos son como un veneno; solo cuando realmente los veas por lo que son, te darás cuenta. Recuerda, no pienses en las personas que te han herido, sigue adelante y desaparecerán.</p>
+                <p>- Las personas que se creen superiores y se consideran especiales suelen ser las más tontas, porque no pueden ver sus propias limitaciones.</p>
+                <p>- Las personas verdaderamente sabias saben ser humildes, mientras que aquellos que se creen superiores solo están ocultando su ignorancia.</p>
+                <p>- Algunas personas se ríen contigo, pero solo los verdaderos amigos estarán allí para enfrentar las lágrimas contigo.</p>
+                <p>- Cuando alguien te ve triste, se siente triste y te consuela por un largo tiempo, recuerda: ¡esa es una persona que realmente vale la pena como amigo!</p>
+                <p>- Las personas que se sienten tristes por tu tristeza son las que realmente se preocupan por ti.</p>
+                <p>- Un verdadero amigo no solo aparece cuando tienes éxito, sino también cuando enfrentas dificultades y tristezas, y está dispuesto a compartir tus cargas.</p>
+                <p>- En la vida, siempre es importante ser discreto; cuando enfrentes dificultades, enfréntalas, no te detengas.</p>
+                <p>- Cuando la tristeza te invada, trata de cambiar de entorno, dar un paseo, escuchar música o ver paisajes, todo esto puede hacerte sentir mejor.</p>
+                <p>- La vida siempre tendrá altibajos, cuando te sientas triste, disfruta de tu tiempo de tranquilidad.</p>
+                <p>- La tristeza es temporal, ayuda a tu manera, y cada sonrisa vale la pena esperar.</p>
+            </div>
+            
+
+            <div class="page-content" id="page-6-right"><center><b>第十二页</b></center> 
+            <hr><br>
+
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="arrow prev hidden" id="prev-arrow">&lt;</div>
+        <div class="arrow next" id="next-arrow">&gt;</div>
+    </div>
+
+    <script>
+        const leftPages = document.querySelectorAll('.left-page .page-content');
+        const rightPages = document.querySelectorAll('.right-page .page-content');
+        const prevArrow = document.getElementById('prev-arrow');
+        const nextArrow = document.getElementById('next-arrow');
+        const openButton = document.getElementById('open-button');
+        const bookContainer = document.getElementById('book-container');
+        const cover = document.querySelector('.cover');
+
+        let currentPage = 0;
+
+        openButton.addEventListener('click', () => {
+            cover.style.display = 'none';
+            bookContainer.style.display = 'flex';
+        });
+
+        function updateArrows() {
+            prevArrow.classList.toggle('hidden', currentPage === 0);
+            nextArrow.classList.toggle('hidden', currentPage === leftPages.length - 1);
+        }
+
+        function showPage(index) {
+            leftPages[currentPage].classList.remove('active');
+            rightPages[currentPage].classList.remove('active');
+            currentPage = index;
+            leftPages[currentPage].classList.add('active');
+            rightPages[currentPage].classList.add('active');
+            updateArrows();
+        }
+
+        prevArrow.addEventListener('click', () => {
+            if (currentPage > 0) {
+                showPage(currentPage - 1);
+            } else {
+                bookContainer.style.display = 'none';
+                cover.style.display = 'flex';
+            }
+        });
+
+        nextArrow.addEventListener('click', () => {
+            if (currentPage < leftPages.length - 1) {
+                showPage(currentPage + 1);
+            }
+        });
+
+        updateArrows();
+    </script>
+</body>
+</html>
